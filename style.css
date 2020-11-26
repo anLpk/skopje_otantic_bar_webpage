@@ -1,0 +1,299 @@
+* { box-sizing: border-box; }
+
+html {
+  font-family: 'Courier Prime','Space Mono', monospace;
+  font-size: 100%;
+  height: 100%;
+}
+
+body { 
+    background-image: url(images/TurkishCarpet.PNG);
+    background-size: cover;
+    margin: 0px auto;
+    padding: 0px;
+ }
+
+/* --------------------------------------------------------*/
+/* Container Design- BG Color - Grid - Margin and Padding - Text Style */
+#Container,
+#ContainerHeader,
+#ThreeContent,
+#FourContent {
+    display: grid;
+}
+
+#TwoContent {
+    margin: 10px auto;
+    padding: 30px;
+}
+
+#OneContent,
+.content,
+#FourContent {
+    background-color: white;
+}
+
+#OneContent > a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.h2 {
+    color: #0033cc;
+    font-size: 22px;
+    text-align: left;
+    text-decoration: none;
+    margin-top: 20px;
+}
+  
+  .h5 {
+    color: #222222;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.fourcontentpic {
+    width: 210px;
+    height: 140px;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.ImgContent,
+.RightContent,
+.MiddleContent {
+    background-color: white;
+}
+
+.MiddleContent {
+    margin: 20px;
+}
+
+.ImgContent {
+    margin-left: 30px;
+    text-align: center;
+}
+
+.RightContent {
+    margin-right: 30px;
+    text-align: center;
+}
+
+#FourContent {
+    margin: 30px;
+}
+
+.LastContent {
+    margin-right: 30px;
+}
+
+/* Media Query */
+
+@media (min-width: 1250px) {
+    /* For a screen > 1250px, this CSS will be read */
+    #ContainerHeader,
+    #TwoContent {
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    #ThreeContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+
+    .containeronepic {
+        width: 240px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    #OneContent {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .donone {
+        display: none;
+    }
+
+    #FourContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+  }
+
+@media (min-width: 850px) and (max-width: 1250px) {
+    /* For a screen > 850px and For a screen < 1250px this CSS will be read */
+    #ContainerThree {
+        display: none;
+    }
+
+    #ContainerHeader {
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    #OneContent {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .containeronepic {
+        width: 220px;
+        height: 180px;
+        padding: 10px;
+    }
+
+    #ThreeContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    #FourContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+@media (max-width: 849px) and (min-width: 700px)  {
+    /* For a screen > 700px and For a screen < 849px this CSS will be read */
+    #ContainerThree,
+    #ContainerFive {
+        display: none;
+    }
+
+    #ContainerHeader {
+        grid-gap: auto;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    #OneContent {
+        display: block;
+        text-align: center;
+    }
+
+     .containeronepic {
+        width: 240px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    .RightContent {
+        display: none;
+    }
+
+    #ThreeContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .ImgContent {
+        margin-right: 30px;
+    }
+
+    #FourContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 2fr;
+    }
+
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+    /* For a screen > 500px and For a screen < 700px this CSS will be read */
+    #ContainerThree,
+    #ContainerFour,
+    #ContainerFive {
+        display: none;
+    }
+
+    #ContainerHeader {
+        grid-gap: auto;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    #OneContent {
+        display: block;
+        text-align: center;
+    }
+
+     .containeronepic {
+        width: 240px;
+        height: 200px;
+        padding: 10px;
+    }
+
+    .RightContent {
+        display: none;
+    }
+
+    .ImgContent {
+        margin-right: 30px;
+    }
+
+    #FourContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 499px) {
+    /* For a screen < 499px this CSS will be read */
+    #ContainerThree,
+    #ContainerFour,
+    #ContainerFive {
+        display: none;
+    }
+    #ContainerHeader {
+        text-align: center;
+        grid-gap: auto;
+        grid-template-columns: 1fr;
+    }
+
+    #OneContent {
+        display: block;
+        text-align: center;
+    }
+
+    .containeronepic {
+        width: 300px;
+        height: 250px;
+        padding: 10px;
+    }
+
+    .RightContent {
+        display: none;
+    }
+
+    .ImgContent {
+        margin-right: 30px;
+    }
+
+    #FourContent {
+        grid-gap: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Footer Style */
+#designby {
+    text-align: center;
+    font-size: 24px;
+    background-color: cornsilk;
+    z-index: 100;
+  }
+  
+  .designby {
+    text-decoration: none;
+  }
+  
+  .designby:visited {
+    color: #192B37;
+  }
+  
+  .designby:hover {
+    color: tomato;
+  }
